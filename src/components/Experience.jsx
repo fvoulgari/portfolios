@@ -4,17 +4,19 @@ import { useState } from "react";
 const experiences = [
   {
     company: "Viva.com",
+    companyUrl: "https://www.viva.com/",
     role: "DevOps Engineer",
     period: "Nov 2023 – Present",
     highlights: [
       "Migrated Azure DevOps agents to Kubernetes with autoscaling, eliminating CI queue times.",
       "Built monitoring tools for mobile app availability and rollout across POS terminals.",
       "Automated POS fleet updates, cutting release time from 4h to 10m across 24 countries.",
-      "Day-to-day: CI/CD optimisation, automation, infra monitoring, SRE-style reliability work.",
+      "Day-to-day: CI/CD optimization, automation, infra monitoring, SRE-style reliability work.",
     ],
   },
   {
     company: "LiNK",
+    companyUrl: "https://linkldenterprise.com/",
     role: "Backend Software Engineer (Part-Time)",
     period: "Nov 2023 – Present",
     highlights: [
@@ -24,6 +26,7 @@ const experiences = [
   },
   {
     company: "Unicorn Domain",
+    companyUrl: "https://unicorndomain.gr/",
     role: "DevOps Engineer",
     period: "Mar 2023 – Nov 2023",
     highlights: [
@@ -34,6 +37,7 @@ const experiences = [
   },
   {
     company: "Unicorn Domain",
+    companyUrl: "https://unicorndomain.gr/",
     role: "Backend Software Engineer",
     period: "May 2022 – Mar 2023",
     highlights: [
@@ -69,12 +73,15 @@ export default function Experience() {
                   : "text-gray-400 border-transparent hover:text-white"
               }`}
             >
-              {exp.company}
-              {exp.company === "Unicorn Domain" && (
-                <span className="ml-2 text-xs text-gray-500">
-                  ({exp.role.includes("DevOps") ? "DevOps" : "Backend"})
-                </span>
-              )}
+              <div>
+                {exp.company}
+                {exp.company === "Unicorn Domain" && (
+                  <span className="ml-2 text-xs text-gray-500">
+                    ({exp.role.includes("DevOps") ? "DevOps" : "Backend"})
+                  </span>
+                )}
+              </div>
+              <div className="text-xs text-gray-500">{exp.period}</div>
             </button>
           ))}
         </div>
@@ -83,9 +90,14 @@ export default function Experience() {
         <div className="md:col-span-2 text-gray-300">
           <h3 className="text-xl font-semibold text-white">
             {experiences[active].role}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+            <a
+              href={experiences[active].companyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 hover:underline"
+            >
               @ {experiences[active].company}
-            </span>
+            </a>
           </h3>
           <p className="text-sm text-gray-500 mb-4">
             {experiences[active].period}

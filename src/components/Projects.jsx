@@ -11,11 +11,11 @@ export default function Projects() {
         Some Things I’ve Built
       </h2>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch [grid-auto-rows:1fr]">
         {projects.map((project, i) => (
           <div
             key={i}
-            className="relative group rounded-lg overflow-hidden"
+            className="relative group rounded-lg overflow-hidden h-full flex flex-col"
           >
             {/* Glow effect */}
             <div
@@ -26,7 +26,7 @@ export default function Projects() {
             {/* Card content */}
             <div
               className="relative p-6 bg-gray-900 rounded-lg shadow-md transition
-                         transform group-hover:-translate-y-2 duration-300 flex flex-col justify-between"
+                         transform group-hover:-translate-y-2 duration-300 flex flex-col justify-between h-full w-full"
             >
               {/* Top icons */}
               <div className="flex justify-between items-center mb-4">

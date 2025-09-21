@@ -8,7 +8,6 @@ export default function About() {
       </h2>
 
       <div className="grid md:grid-cols-3 gap-12 items-start">
-        {/* Text Content */}
         <div className="md:col-span-2 text-gray-300 space-y-4">
           <p>
             I’m <span className="text-white font-semibold">Spyros</span> — a backend engineer and
@@ -31,8 +30,7 @@ export default function About() {
 
           <p>
             Outside of work, I enjoy experimenting with personal projects — like a container-native
-            CI/CD platform in Go with autoscaling runners, and an RSS reader with a React frontend
-            and AI-generated UI.
+            CI/CD platform in Go with autoscaling runners, and an RSS reader with an Astro.js frontend.
           </p>
 
           <p>
@@ -41,7 +39,6 @@ export default function About() {
             problems without unnecessary complexity.
           </p>
 
-          {/* Skills list */}
           <div className="grid grid-cols-2 gap-2 pt-4">
             <p className="flex items-center gap-2">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">➤</span>
@@ -70,7 +67,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Profile Image */}
         <div className="flex justify-center md:justify-end">
           <div className="relative w-72 h-72 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
             <Image

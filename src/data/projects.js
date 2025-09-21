@@ -10,26 +10,24 @@ const projects = [
   {
     title: "Self-Hostable CI/CD Platform",
     description:
-      "A a self-hostable CI/CD platform that runs pipelines using Docker containers.",
+      "A self-hostable CI/CD platform that runs pipelines using Docker containers.",
     tech: ["Go", "Kubernetes", "Docker", "Terraform"],
     github: "https://github.com/SpyrosMoux/cicd",
     external: "https://docs.flowforge.spyrosmoux.com/introduction",
   },
   {
-    title: "Draft Project Two",
+    title: "PWM",
     description:
-      "Another placeholder project. Description will be filled in soon.",
-    tech: ["Node.js", "Express", "MongoDB"],
-    github: "#",
-    external: "#",
+      "A lightweight password manager written in Go, focusing on simplicity and security.",
+    tech: ["Go", "CLI", "Encryption"],
+    github: "https://github.com/SpyrosMoux/pwm",
   },
   {
-    title: "Draft Project Three",
+    title: "PasswdGen",
     description:
-      "A sample project card layout, waiting for Spyros to add a real project.",
-    tech: ["Python", "Flask", "PostgreSQL"],
-    github: "#",
-    external: "#",
+      "A simple command-line tool to generate secure, customizable passwords.",
+    tech: ["Go", "CLI"],
+    github: "https://github.com/SpyrosMoux/passwdgen",
   },
 ];
 
