@@ -70,7 +70,7 @@ export default function Experience() {
               className={`pl-4 py-2 text-left transition border-l-4 ${
                 active === index
                   ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 border-blue-500 font-semibold"
-                  : "text-gray-400 border-transparent hover:text-white"
+                  : "text-gray-400 border-transparent hover:text-black dark:hover:text-white"
               }`}
             >
               <div>
@@ -88,7 +88,7 @@ export default function Experience() {
 
         {/* Right side - Active job details */}
         <div className="md:col-span-2 text-gray-300">
-          <h3 className="text-xl font-semibold text-white">
+          <h3 className="text-xl font-semibold text-black dark:text-white">
             {experiences[active].role}{" "}
             <a
               href={experiences[active].companyUrl}
@@ -105,7 +105,7 @@ export default function Experience() {
 
           <ul className="list-disc pl-6 space-y-2">
             {experiences[active].highlights.map((item, i) => (
-              <li key={i} className="text-gray-300">
+              <li key={i} className="text-gray-700 dark:text-gray-300">
                 {item}
               </li>
             ))}

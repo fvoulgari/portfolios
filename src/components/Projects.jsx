@@ -25,7 +25,7 @@ export default function Projects() {
 
             {/* Card content */}
             <div
-              className="relative p-6 bg-gray-900 rounded-lg shadow-md transition
+              className="relative p-6 bg-gray-100 dark:bg-gray-900 rounded-lg shadow-md transition
                          transform group-hover:-translate-y-2 duration-300 flex flex-col justify-between h-full w-full"
             >
               {/* Top icons */}
@@ -37,7 +37,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-black dark:hover:text-white transition"
                     >
                       <Github size={20} />
                     </a>
@@ -47,7 +47,7 @@ export default function Projects() {
                       href={project.external}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition"
+                      className="text-gray-400 hover:text-black dark:hover:text-white transition"
                     >
                       <ExternalLink size={20} />
                     </a>
@@ -58,7 +58,7 @@ export default function Projects() {
               {/* Title & description */}
               <div>
                 <h3
-                  className="text-xl font-semibold text-white mb-2
+                  className="text-xl font-semibold text-black dark:text-white mb-2
                              transition group-hover:text-transparent group-hover:bg-clip-text
                              group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-600"
                 >

@@ -11,7 +11,7 @@ export default function Hero() {
         href="#projects"
         className="inline-block rounded-md p-[2px] bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-90 transition"
         >
-        <span className="block rounded-md px-8 py-3 bg-black text-white font-semibold">
+        <span className="block rounded-md px-8 py-3 light:bg-white dark:bg-black text-white font-semibold">
           Check out my work
         </span>
       </a>

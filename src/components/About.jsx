@@ -10,7 +10,7 @@ export default function About() {
       <div className="grid md:grid-cols-3 gap-12 items-start">
         <div className="md:col-span-2 text-gray-300 space-y-4">
           <p>
-            I’m <span className="text-white font-semibold">Spyros</span> — a backend engineer and
+            I’m <span className="font-semibold">Spyros</span>, a backend engineer and
             DevOps enthusiast who loves solving problems with clean code and smart infrastructure.
           </p>
 
@@ -23,19 +23,19 @@ export default function About() {
 
           <p>
             I’ve designed scalable systems at{" "}
-            <span className="text-white font-semibold">Viva.com</span>, architected backend APIs at{" "}
-            <span className="text-white font-semibold">LiNK</span>, and built AWS/Azure pipelines at{" "}
-            <span className="text-white font-semibold">Unicorn Domain</span>.
+            <span className="font-semibold">Viva.com</span>, architected backend APIs at{" "}
+            <span className="font-semibold">LiNK</span>, and built AWS/Azure pipelines at{" "}
+            <span className="font-semibold">Unicorn Domain</span>.
           </p>
 
           <p>
-            Outside of work, I enjoy experimenting with personal projects — like a container-native
+            Outside of work, I enjoy experimenting with personal projects, like a container-native
             CI/CD platform in Go with autoscaling runners, and an RSS reader with an Astro.js frontend.
           </p>
 
           <p>
-            I value <span className="text-white font-semibold">simplicity</span>,{" "}
-            <span className="text-white font-semibold">reliability</span>, and tools that solve real
+            I value <span className="font-semibold">simplicity</span>,{" "}
+            <span className="font-semibold">reliability</span>, and tools that solve real
             problems without unnecessary complexity.
           </p>
 
