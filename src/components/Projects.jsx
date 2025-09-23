@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 px-6 max-w-6xl mx-auto"
+      className="min-h-[50vh] md:min-h-screen pt-20 px-6 max-w-6xl mx-auto"
     >
       <h2 className="text-3xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
         Some Things I’ve Built

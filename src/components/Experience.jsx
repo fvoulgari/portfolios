@@ -54,18 +54,17 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen py-20 px-6 max-w-6xl mx-auto"
+      className="min-h-[50vh] md:min-h-[90vh] pt-20 px-6 max-w-6xl mx-auto"
     >
       <h2 className="text-3xl font-bold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
         Experience
       </h2>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {/* Left side - Company list */}
-        <div className="flex flex-col space-y-2 border-l border-gray-700">
+      <div className="flex flex-col md:grid md:grid-cols-3 gap-8">
+        <div className="hidden md:flex flex-col space-y-2 border-l border-gray-700">
           {experiences.map((exp, index) => (
             <button
-              key={`${exp.company}-${exp.role}-${index}`}
+              key={`${exp.company}-${index}`}
               onClick={() => setActive(index)}
               className={`pl-4 py-2 text-left transition border-l-4 ${
                 active === index
@@ -86,7 +85,27 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Right side - Active job details */}
+        <div className="md:hidden relative -mx-6 px-6 mb-6">
+          <div className="flex space-x-6 overflow-x-auto pb-2 snap-x">
+            {experiences.map((exp, index) => (
+              <button
+                key={`${exp.company}-mobile-${index}`}
+                onClick={() => setActive(index)}
+                className={`relative whitespace-nowrap snap-start transition pb-2 ${
+                  active === index
+                    ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 font-semibold"
+                    : "text-gray-400 hover:text-black dark:hover:text-white"
+                }`}
+              >
+                {exp.company}
+                {active === index && (
+                  <span className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 to-purple-600 rounded"></span>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="md:col-span-2 text-gray-300">
           <h3 className="text-xl font-semibold text-black dark:text-white">
             {experiences[active].role}{" "}

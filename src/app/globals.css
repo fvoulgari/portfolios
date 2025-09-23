@@ -31,7 +31,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.py-20 {
+.pt-20 {
   padding-block: calc(var(--spacing) * 30);
 }
 
