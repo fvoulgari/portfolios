@@ -10,33 +10,26 @@ export default function About() {
       <div className="grid md:grid-cols-3 gap-12 items-start">
         <div className="md:col-span-2 text-gray-300 space-y-4">
           <p>
-            I’m <span className="font-semibold">Spyros</span>, a backend engineer and
-            DevOps enthusiast who loves solving problems with clean code and smart infrastructure.
+            I’m <span className="font-semibold">Spyros</span>, a Senior DevOps Engineer based in Dublin.
+             I design and operate the infrastructure that helps engineering teams move fast without breaking things.
           </p>
 
           <p>
-            I started out building backend services in Java and Spring Boot, then moved into DevOps
-            roles with Docker, Kubernetes, AWS, Azure, and CI/CD pipelines. Today I combine both
-            worlds: coding backend systems in Go and managing infrastructure to help teams ship
-            faster and safer.
+            I started out building backend services in Java and Spring Boot, which gave me a solid foundation in how software actually runs in production.
+             Over time I moved deeper into infrastructure, Linux systems and cloud-native environments. Today that background shapes how I approach platform work: 
+             <span className="font-semibold"> with the same care for clean architecture and maintainability that good software demands.</span>
           </p>
 
           <p>
-            I’ve designed scalable systems at{" "}
-            <span className="font-semibold">Viva.com</span>, architected backend APIs at{" "}
-            <span className="font-semibold">LiNK</span>, and built AWS/Azure pipelines at{" "}
-            <span className="font-semibold">Unicorn Domain</span>.
+            Outside of work I build things that scratch my own itches. A container-native CI/CD platform in Go with autoscaling runners.
+             A React-based RSS reader.
+             A lightweight CLI password manager in Go that stores credentials with AES encryption.
           </p>
 
           <p>
-            Outside of work, I enjoy experimenting with personal projects, like a container-native
-            CI/CD platform in Go with autoscaling runners, and an RSS reader with an Astro.js frontend.
-          </p>
-
-          <p>
-            I value <span className="font-semibold">simplicity</span>,{" "}
-            <span className="font-semibold">reliability</span>, and tools that solve real
-            problems without unnecessary complexity.
+            I care about <span className="font-semibold">automation</span>,{" "}
+            <span className="font-semibold">reliability</span> and systems that don't get in the way,
+             infrastructure that is simple, predictable and built to scale.
           </p>
 
           <div className="grid grid-cols-2 gap-2 pt-4">
@@ -70,7 +63,7 @@ export default function About() {
         <div className="flex justify-center md:justify-end">
           <div className="relative w-72 h-72 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Spyros Mouchlianitis"
               fill
               className="object-cover grayscale hover:grayscale-0 transition"

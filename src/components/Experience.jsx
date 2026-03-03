@@ -5,8 +5,20 @@ const experiences = [
   {
     company: "Viva.com",
     companyUrl: "https://www.viva.com/",
+    role: "Senior DevOps Engineer",
+    period: "Jan 2026 – Present",
+    highlights: [
+      "Designed and implemented a CI health bot that detects pipeline failures, identifies root causes and proactively reduces MTTR.",
+      "Built internal tooling to visualize CI/CD topology across teams, improving onboarding and operational transparency.",
+      "Acted as platform owner for CI infrastructure, focusing on reliability, scalability and developer experience.",
+      "Mentored junior engineers and improved onboarding journeys by standardising CI/CD patterns and documenting platform best practices."
+    ],
+  },
+  {
+    company: "Viva.com",
+    companyUrl: "https://www.viva.com/",
     role: "DevOps Engineer",
-    period: "Nov 2023 – Present",
+    period: "Nov 2023 – Jan 2026",
     highlights: [
       "Migrated Azure DevOps agents to Kubernetes with autoscaling, eliminating CI queue times.",
       "Built monitoring tools for mobile app availability and rollout across POS terminals.",

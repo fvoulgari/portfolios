@@ -11,8 +11,7 @@ export default function Hero() {
         Spyros Mouchlianitis.
       </h1>
       <h2 className="text-lg sm:text-xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-        I write backend code – mostly in Go – and build tools that make life
-        easier for developers and teams.
+        I build platforms and infrastructure that get out of the way, so engineering teams can ship faster and sleep better.
       </h2>
       <a
         href="#projects"
