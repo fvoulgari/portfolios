@@ -3,13 +3,33 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import content from "@/content";
 
-const navItems = [
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" },
-];
+const includeHero = content.navigation?.includeHero ?? false;
+
+const navItems = (content.navigation && Array.isArray(content.navigation.items) && content.navigation.items.length > 0)
+  ?
+    content.navigation.items
+      .filter((item) => {
+        if (!item || !item.href) return false;
+        const href = item.href.startsWith("#") ? item.href.slice(1) : item.href;
+        if (href === "hero" && !includeHero) return false;
+        if (content.sections && content.sections.enabled && href in content.sections.enabled) {
+          return content.sections.enabled[href];
+        }
+        return true;
+      })
+      .map((item) => ({ href: item.href, label: item.label }))
+  :
+    content.sections.order
+      .filter((section) => {
+        if (section === "hero") return includeHero && content.sections.enabled[section];
+        return !!content.sections.enabled[section];
+      })
+      .map((section) => ({
+        href: `#${section}`,
+        label: section.charAt(0).toUpperCase() + section.slice(1),
+      }));
 
 export default function Navbar() {
   const [active, setActive] = useState("");
@@ -36,11 +56,11 @@ export default function Navbar() {
     <nav className="sticky top-0 left-0 w-full z-50 bg-white dark:bg-black transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <a
-          href="#hero"
+          href={content.navigation?.logoHref ?? "#hero"}
           className="text-2xl font-extrabold text-transparent bg-clip-text
           bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-80 transition"
         >
-          SM
+          {content.assets?.logoText}
         </a>
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map(({ href, label }) => (
@@ -58,7 +78,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="/CV-Spyros-Mouchlianitis.pdf"
+            href={content.assets?.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block rounded-md p-[2px] bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-90 transition"

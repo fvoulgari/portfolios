@@ -1,64 +1,8 @@
 "use client";
 import { useState } from "react";
+import content from "@/content";
 
-const experiences = [
-  {
-    company: "Viva.com",
-    companyUrl: "https://www.viva.com/",
-    role: "Senior DevOps Engineer",
-    period: "Jan 2026 – Present",
-    highlights: [
-      "Designed and implemented a CI health bot that detects pipeline failures, identifies root causes and proactively reduces MTTR.",
-      "Built internal tooling to visualize CI/CD topology across teams, improving onboarding and operational transparency.",
-      "Acted as platform owner for CI infrastructure, focusing on reliability, scalability and developer experience.",
-      "Mentored junior engineers and improved onboarding journeys by standardising CI/CD patterns and documenting platform best practices."
-    ],
-  },
-  {
-    company: "Viva.com",
-    companyUrl: "https://www.viva.com/",
-    role: "DevOps Engineer",
-    period: "Nov 2023 – Jan 2026",
-    highlights: [
-      "Migrated Azure DevOps agents to Kubernetes with autoscaling, eliminating CI queue times.",
-      "Built monitoring tools for mobile app availability and rollout across POS terminals.",
-      "Automated POS fleet updates, cutting release time from 4h to 10m across 24 countries.",
-      "Day-to-day: CI/CD optimization, automation, infra monitoring, SRE-style reliability work.",
-    ],
-  },
-  {
-    company: "LiNK",
-    companyUrl: "https://linkldenterprise.com/",
-    role: "Backend Software Engineer (Part-Time)",
-    period: "Nov 2023 – Present",
-    highlights: [
-      "Architected and implemented backend systems (Spring Boot / Quarkus) for CRM and roommate matching apps.",
-      "Designed core APIs and DB schemas; mentored juniors; owned backend scalability.",
-    ],
-  },
-  {
-    company: "Unicorn Domain",
-    companyUrl: "https://unicorndomain.gr/",
-    role: "DevOps Engineer",
-    period: "Mar 2023 – Nov 2023",
-    highlights: [
-      "Designed AWS architectures for web apps to improve scalability and cost efficiency.",
-      "Built GitHub Actions CI/CD pipelines for reproducible, faster deployments.",
-      "Managed & monitored Kubernetes clusters to maintain high availability.",
-    ],
-  },
-  {
-    company: "Unicorn Domain",
-    companyUrl: "https://unicorndomain.gr/",
-    role: "Backend Software Engineer",
-    period: "May 2022 – Mar 2023",
-    highlights: [
-      "Developed RESTful APIs with Java Spring Boot integrated with cloud services.",
-      "Containerised apps with Docker; deployed to AWS via Kubernetes & Helm.",
-      "Automated builds with Bitbucket Pipelines; provisioned AWS infra with Terraform.",
-    ],
-  },
-];
+const experiences = content.experience;
 
 export default function Experience() {
   const [active, setActive] = useState(0);

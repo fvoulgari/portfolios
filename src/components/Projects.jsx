@@ -1,7 +1,8 @@
 import { Folder, Github, ExternalLink } from "lucide-react";
-import projects from "../data/projects";
+import content from "@/content";
 
 export default function Projects() {
+  const projects = content.projects;
   return (
     <section
       id="projects"
@@ -31,28 +32,25 @@ export default function Projects() {
               {/* Top icons */}
               <div className="flex justify-between items-center mb-4">
                 <Folder className="text-blue-400" size={28} />
-                <div className="flex space-x-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-black dark:hover:text-white transition"
-                    >
-                      <Github size={20} />
-                    </a>
-                  )}
-                  {project.external && (
-                    <a
-                      href={project.external}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-black dark:hover:text-white transition"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                  )}
-                </div>
+                              <div className="flex space-x-4">
+                                {project.links && project.links.length > 0 &&
+                                  project.links.map((link, idx) => {
+                                    const url = link.url;
+                                    const label = (link.label || "").toLowerCase();
+                                    const isGithub = label.includes("github") || url.includes("github.com");
+                                    return (
+                                      <a
+                                        key={idx}
+                                        href={url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-400 hover:text-black dark:hover:text-white transition"
+                                      >
+                                        {isGithub ? <Github size={20} /> : <ExternalLink size={20} />}
+                                      </a>
+                                    );
+                                  })}
+                              </div>
               </div>
 
               {/* Title & description */}

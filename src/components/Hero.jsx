@@ -1,4 +1,9 @@
+import content from "@/content";
+
 export default function Hero() {
+  const { headline } = content.site;
+  const { name } = content.person;
+
   return (
     <section
       id="hero"
@@ -8,10 +13,10 @@ export default function Hero() {
         Hi, my name is
       </p>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-        Spyros Mouchlianitis.
+        {name}.
       </h1>
       <h2 className="text-lg sm:text-xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-        I build platforms and infrastructure that get out of the way, so engineering teams can ship faster and sleep better.
+        {headline}
       </h2>
       <a
         href="#projects"
