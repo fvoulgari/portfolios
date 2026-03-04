@@ -1,153 +1,93 @@
 {
   "site": {
-    "headline": "I build platforms and infrastructure that get out of the way, so engineering teams can ship faster and sleep better.",
+    "headline": "Provide a brief description of what you do and what you are passionate about.",
     "socials": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/SpyrosMoux"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://linkedin.com/in/spyrosmoux"
-      }
+      { "label": "GitHub", "url": "https://github.com/yourusername" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/yourusername" }
     ]
   },
 
   "person": {
-    "name": "Spyros Mouchlianitis",
-    "location": "Dublin"
+    "name": "Your Name",
+    "location": "City, Country"
   },
 
   "assets": {
-    "resumeUrl": "/CV-Spyros-Mouchlianitis.pdf",
-    "profileImage": "/profile.png",
-    "logoText": "SM"
+    "resumeUrl": "/CV-Your-Name.pdf",
+    "profileImage": "/example.png",
+    "logoText": "FV"
   },
 
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "I'm Spyros, a Senior DevOps Engineer based in Dublin. I design and operate the infrastructure that helps engineering teams move fast without breaking things.",
-      "I started out building backend services in Java and Spring Boot, which gave me a solid foundation in how software actually runs in production. Over time I moved deeper into infrastructure, Linux systems and cloud-native environments. Today that background shapes how I approach platform work: with the same care for clean architecture and maintainability that good software demands.",
-      "Outside of work I build things that scratch my own itches. A container-native CI/CD platform in Go with autoscaling runners. A React-based RSS reader. A lightweight CLI password manager in Go that stores credentials with AES encryption.",
-      "I care about automation, reliability and systems that don't get in the way, infrastructure that is simple, predictable and built to scale."
+      "Provide a brief introduction about who you are and what you focus on. This is a good place to highlight your background, what motivates you and the kind of work you are passionate about.",
+      "You can also mention any personal projects, open source contributions or side hustles that demonstrate your skills and interests.",
+      "Feel free to share your approach to engineering, what you value in systems and infrastructure and how you like to work with teams."
     ],
     "skills": [
       {
-        "category": "Programming Languages",
-        "items": ["Golang", "Java/Spring Boot"]
+        "category": "Programming",
+        "items": ["skill 1", "skill 2"]
       },
       {
-        "category": "DevOps & Cloud",
-        "items": ["Docker & Kubernetes", "AWS & Azure", "Terraform & Ansible", "CI/CD"]
+        "category": "Platform & Cloud",
+        "items": ["skill 3"]
       },
       {
-        "category": "Linux & System Administration",
-        "items": ["Linux Administration", "System Design"]
+        "category": "Systems",
+        "items": ["skill 4", "skill 5"]
       }
     ]
   },
 
   "experience": [
     {
-      "company": "Viva.com",
-      "companyUrl": "https://www.viva.com/",
-      "role": "Senior DevOps Engineer",
-      "period": "Jan 2026 – Present",
+      "company": "Company Name",
+      "companyUrl": "https://company.com",
+      "role": "Role Title",
+      "period": "Start date – End date",
       "highlights": [
-        "Designed and implemented a CI health bot that detects pipeline failures, identifies root causes and proactively reduces MTTR.",
-        "Built internal tooling to visualize CI/CD topology across teams, improving onboarding and operational transparency.",
-        "Acted as platform owner for CI infrastructure, focusing on reliability, scalability and developer experience.",
-        "Mentored junior engineers and improved onboarding journeys by standardising CI/CD patterns and documenting platform best practices."
+        "Provide a brief overview of your responsibilities and achievements in this role.",
+        "Focus on the impact you had, the problems you solved and the skills you applied."
       ]
     },
     {
-      "company": "Viva.com",
-      "companyUrl": "https://www.viva.com/",
-      "role": "DevOps Engineer",
-      "period": "Nov 2023 – Jan 2026",
+      "company": "Previous Company",
+      "companyUrl": "https://previous-company.com",
+      "role": "Role Title",
+      "period": "Start date – End date",
       "highlights": [
-        "Migrated Azure DevOps agents to Kubernetes with autoscaling, eliminating CI queue times.",
-        "Built monitoring tools for mobile app availability and rollout across POS terminals.",
-        "Automated POS fleet updates, cutting release time from 4h to 10m across 24 countries.",
-        "Day-to-day: CI/CD optimization, automation, infra monitoring, SRE-style reliability work."
-      ]
-    },
-    {
-      "company": "LiNK",
-      "companyUrl": "https://linkldenterprise.com/",
-      "role": "Backend Software Engineer (Part-Time)",
-      "period": "Nov 2023 – Present",
-      "highlights": [
-        "Architected and implemented backend systems (Spring Boot / Quarkus) for CRM and roommate matching apps.",
-        "Designed core APIs and DB schemas; mentored juniors; owned backend scalability."
-      ]
-    },
-    {
-      "company": "Unicorn Domain",
-      "companyUrl": "https://unicorndomain.gr/",
-      "role": "DevOps Engineer",
-      "period": "Mar 2023 – Nov 2023",
-      "highlights": [
-        "Designed AWS architectures for web apps to improve scalability and cost efficiency.",
-        "Built GitHub Actions CI/CD pipelines for reproducible, faster deployments.",
-        "Managed & monitored Kubernetes clusters to maintain high availability."
-      ]
-    },
-    {
-      "company": "Unicorn Domain",
-      "companyUrl": "https://unicorndomain.gr/",
-      "role": "Backend Software Engineer",
-      "period": "May 2022 – Mar 2023",
-      "highlights": [
-        "Developed RESTful APIs with Java Spring Boot integrated with cloud services.",
-        "Containerised apps with Docker; deployed to AWS via Kubernetes & Helm.",
-        "Automated builds with Bitbucket Pipelines; provisioned AWS infra with Terraform."
+        "Provide a brief overview of your responsibilities and achievements in this role.",
+        "Focus on the impact you had, the problems you solved and the skills you applied."
       ]
     }
   ],
 
   "projects": [
     {
-      "title": "GoRSS",
-      "description": "A simple, self-hostable RSS reader written in Go with a React frontend.",
-      "tech": ["Go", "React", "Docker", "AI"],
+      "title": "Project One",
+      "description": "A short description of a project that demonstrates engineering skills.",
+      "tech": ["Go", "Docker"],
       "links": [
-        { "label": "GitHub", "url": "https://github.com/SpyrosMoux/gorss" },
-        { "label": "External", "url": "https://gorss.spyrosmoux.com/" }
+        { "label": "GitHub", "url": "https://github.com/yourusername/project-one" }
       ]
     },
     {
-      "title": "Self-Hostable CI/CD Platform",
-      "description": "A self-hostable CI/CD platform that runs pipelines using Docker containers.",
-      "tech": ["Go", "Kubernetes", "Docker", "Terraform"],
+      "title": "Project Two",
+      "description": "Another project showcasing platform, automation, or systems work.",
+      "tech": ["Terraform", "Kubernetes"],
       "links": [
-        { "label": "GitHub", "url": "https://github.com/SpyrosMoux/cicd" },
-        { "label": "External", "url": "https://docs.flowforge.spyrosmoux.com/introduction" }
-      ]
-    },
-    {
-      "title": "PWM",
-      "description": "A lightweight password manager written in Go, focusing on simplicity and security.",
-      "tech": ["Go", "CLI", "Encryption"],
-      "links": [
-        { "label": "GitHub", "url": "https://github.com/SpyrosMoux/pwm" }
-      ]
-    },
-    {
-      "title": "PasswdGen",
-      "description": "A simple command-line tool to generate secure, customizable passwords.",
-      "tech": ["Go", "CLI"],
-      "links": [
-        { "label": "GitHub", "url": "https://github.com/SpyrosMoux/passwdgen" }
+        { "label": "GitHub", "url": "https://github.com/yourusername/project-two" },
+        { "label": "Live", "url": "https://project-two.example.com" }
       ]
     }
   ],
 
   "contact": {
     "title": "Get In Touch",
-    "description": "I'm always open to discussing new opportunities, interesting projects, or just having a chat about backend systems and DevOps. If you'd like to connect, drop me a message and I'll get back to you.",
-    "email": "spyrosgsaaa@gmail.com",
+    "description": "Feel free to reach out if you want to connect, collaborate or just say hi.",
+    "email": "your.email@example.com",
     "buttonText": "Say Hello"
   },
 

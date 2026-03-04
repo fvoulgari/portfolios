@@ -1,3 +1,51 @@
+# Portfolio Template — Usage Guide
+
+This repository is a reusable, JSON-driven Next.js portfolio template. Supply a `content` JSON file (or multiple profile JSONs) to render different portfolio instances without changing components.
+
+## Purpose
+- Provide a lightweight, content-first portfolio template.
+- Keep UI and styling in the template and drive all copy/data from JSON profiles.
+
+## Where content lives
+- Canonical content (development): `content/content.json`
+- Examples and templates: `content/examples/` and `content/template.json`
+- Runtime profiles (recommended): `public/content/profiles/your-name.json` to allow switching without rebuilds
+
+## Key content areas
+- `site`: site-level settings (headline, socials).
+- `person`: identity fields (`name`, `location`, ...).
+- `assets`: static paths and labels (`logoText`, `resumeUrl`, `profileImage`).
+- `about`, `experience`, `projects`, `contact`: main page sections.
+- `navigation`: nav-specific options (e.g. `includeHero`).
+- `sections`: order and `enabled` map controlling which sections appear and in what order.
+
+## How to switch profiles (recommended)
+1. Add a profile JSON file to `public/content/profiles/your-name.json`.
+2. Set `NEXT_PUBLIC_CONTENT_PROFILE=your-name` in your environment.
+3. Implement a runtime loader in `src/content.js` that fetches `/content/profiles/${profile}.json`.
+
+This lets you swap profiles without rebuilding.
+
+## Static vs runtime loading
+- Static import: `src/content.js` can import `content/content.json` at build time. This is simple but requires a rebuild to change content.
+- Runtime fetch: fetch a profile from `public/content/profiles/` at runtime. This is recommended for templates and demos.
+
+## Validation
+Use `zod` or a JSON Schema to validate profiles. The repo already includes `zod` in dependencies; adding a short schema + loader will prevent runtime errors when required fields are missing.
+
+## Quick start
+```bash
+npm install
+npm run dev
+```
+
+## Suggested next steps
+- Add `public/content/profiles/spyros.json` as an example profile
+- Implement the runtime loader (`src/content.js`) reading `NEXT_PUBLIC_CONTENT_PROFILE`
+- (Optional) Add `zod` validation for profiles to surface helpful errors
+
+If you want, I can implement the example profile and runtime loader now.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
